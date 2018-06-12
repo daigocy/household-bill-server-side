@@ -61,11 +61,6 @@ app.put('/api/bills/', (req, res) => {
         if(error) return res.send(500, 'database error');
         res.json({ok: true});
     })
-    // console.log(b);
-    // b.save((error, nb) => {
-    //     if(error)  return res.send(500, 'database error');
-    //     res.json({id: nb.id});
-    // });
 });
 
 app.delete('/api/bills/:id', (req,res) => {
@@ -74,6 +69,7 @@ app.delete('/api/bills/:id', (req,res) => {
         res.json({ok: true});
     });
 })
+
     
 
 app.listen(app.get('port'), () => {
